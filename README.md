@@ -3,7 +3,7 @@
 Contoh Hasil Program ApaBoleh:
 
 N = 30
-![image](https://user-images.githubusercontent.com/56074758/202993576-6f1bb55c-07df-4a7d-ba28-750157887be6.png)
+![image](https://user-images.githubusercontent.com/56074758/202993704-70d7fe74-9315-4403-a9f8-b22bd90205df.png)
 
 N = 50
 ![image](https://user-images.githubusercontent.com/56074758/202993481-a5b3b5b6-d867-4c5b-b5e6-d2b32a65b5ce.png)
