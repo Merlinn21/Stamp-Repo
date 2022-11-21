@@ -1,0 +1,19 @@
+function printNumber(number){
+    var lineToWrite = "";
+
+    for(let i = 1; i <= number; i++){
+        if(i % 3 == 0 || i % 5 == 0){
+            if(i % 3 == 0) lineToWrite += "Apa";
+            if(i % 5 == 0) lineToWrite += "Bole";
+        } else{
+            lineToWrite += i.toString();
+        }
+
+        if(i != number) lineToWrite += ", ";
+    }
+
+    console.log(lineToWrite);
+}
+
+printNumber(100);
+
