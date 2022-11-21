@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "Nomor 2 - Open Weather API/gson-2.10.jar"
+    ]
+}
