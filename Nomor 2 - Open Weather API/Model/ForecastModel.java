@@ -1,7 +1,5 @@
 package Model;
 
-import java.util.Date;
-
 import com.google.gson.annotations.SerializedName;
 
 public class ForecastModel {
