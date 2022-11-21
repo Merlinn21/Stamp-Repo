@@ -17,15 +17,14 @@ import Model.ResponseModel;
 public class WeatherForecast{
     public static void main(String[] args){
         // Jakarta latitude & longitude
-        float lat = -6.2146f;
-        float lon = 106.8456f;
+        String city = "jakarta";
 
-        getWeatherData(lat, lon);
+        getWeatherData(city);
     }
 
-    public static void getWeatherData(float lat, float lon){
+    public static void getWeatherData(String city){
         try {
-            URL url = getUrl(lat, lon);
+            URL url = getUrl(city);
 
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestProperty("accept", "application/json");
@@ -43,14 +42,13 @@ public class WeatherForecast{
         }
     }
 
-    public static URL getUrl(float lat, float lon){
+    public static URL getUrl(String city){
         try {
             String API_KEY = "79e7b5fd3f68df73fca2d63475b31a7f";
             String BASE_URL = "http://api.openweathermap.org/data/2.5/forecast";
             String UNITS = "metric";
 
-            BASE_URL += "?lat=" + lat;
-            BASE_URL += "&lon=" + lon;
+            BASE_URL += "?q=" + city;
             BASE_URL += "&appid=" + API_KEY;
             BASE_URL += "&units=" + UNITS;
 
@@ -67,19 +65,19 @@ public class WeatherForecast{
         int day = -1;
         
         try {
-            for(int i = 0; i < forecastData.getForecastModels().size(); i++){
+            for(int i = 0; i < forecastData.getForecastModels().size(); i += 8){
                 ForecastModel forecast = forecastData.getForecastModels().get(i);
                 Date date = dateFormat.parse(forecast.getDate());
                 calendar.setTime(date);
 
-                if(day == calendar.get(Calendar.DAY_OF_MONTH)) continue;
+                //if(day == calendar.get(Calendar.DAY_OF_MONTH)) continue;
 
                 String dateString = convertDateString(date);
                 String temp = forecast.getWeatherData().getTemp() + "°C";
     
                 System.out.println(dateString + ": " + temp);
 
-                day = calendar.get(Calendar.DAY_OF_MONTH);
+                //day = calendar.get(Calendar.DAY_OF_MONTH);
             }     
             
         } catch (Exception e) {
