@@ -61,8 +61,6 @@ public class WeatherForecast{
     public static void printForecast(ResponseModel forecastData){
         Calendar calendar = GregorianCalendar.getInstance();
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd kk:mm:ss");
-
-        int day = -1;
         
         try {
             for(int i = 0; i < forecastData.getForecastModels().size(); i += 8){
@@ -70,14 +68,10 @@ public class WeatherForecast{
                 Date date = dateFormat.parse(forecast.getDate());
                 calendar.setTime(date);
 
-                //if(day == calendar.get(Calendar.DAY_OF_MONTH)) continue;
-
                 String dateString = convertDateString(date);
                 String temp = forecast.getWeatherData().getTemp() + "°C";
     
                 System.out.println(dateString + ": " + temp);
-
-                //day = calendar.get(Calendar.DAY_OF_MONTH);
             }     
             
         } catch (Exception e) {
