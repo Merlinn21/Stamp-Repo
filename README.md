@@ -10,3 +10,10 @@ N = 50
 
 N = 100
 ![image](https://user-images.githubusercontent.com/56074758/202993126-0d52d53d-74c6-4d54-9edb-5fa8beaed70a.png)
+
+Contoh Weather Forecast:
+<br>
+Forecast Jakarta untuk 5 hari kedepan
+<br>
+![image](https://user-images.githubusercontent.com/56074758/203078646-d1cd7558-58f4-4209-ab64-afde25548393.png)
+
