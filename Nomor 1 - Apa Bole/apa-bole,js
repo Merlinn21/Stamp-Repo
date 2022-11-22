@@ -15,5 +15,5 @@ function printNumber(number){
     console.log(lineToWrite);
 }
 
-printNumber(30);
+printNumber(100);
 
